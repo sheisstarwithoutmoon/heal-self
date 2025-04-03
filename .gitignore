@@ -1,1 +1,48 @@
-.env
+# Node.js dependencies  
+node_modules/  
+npm-debug.log*  
+yarn-error.log  
+dist/  
+build/  
+
+# Python dependencies  
+__pycache__/  
+*.pyc  
+*.pyo  
+*.pyd  
+env/  
+venv/  
+
+# Environment variables  
+.env  
+.env.local  
+.env.development  
+.env.production  
+
+# Logs  
+logs/  
+*.log  
+debug.log  
+nohup.out  
+*.pid  
+*.seed  
+*.state  
+
+# Database files  
+*.sqlite  
+*.sqlite3  
+db.json  
+dump.rdb  
+
+# Security & Credentials  
+*.pem  
+*.key  
+*.crt  
+*.pfx  
+config/keys.json  
+
+# IDE & OS-generated files  
+.vscode/  
+.idea/  
+.DS_Store  
+Thumbs.db  
