@@ -62,5 +62,5 @@ app.get("/", (req, res) => {
 app.use(authRoutes);
 
 app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+  console.log("Server is running on port 3000 http://localhost:3000");
 });

@@ -28,12 +28,6 @@ nohup.out
 *.seed  
 *.state  
 
-# Database files  
-*.sqlite  
-*.sqlite3  
-db.json  
-dump.rdb  
-
 # Security & Credentials  
 *.pem  
 *.key  

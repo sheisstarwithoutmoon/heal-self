@@ -12,6 +12,8 @@
   "dependencies": {
     "cookie-parser": "^1.4.7",
     "crypt": "^0.0.2",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "express-session": "^1.18.1",

@@ -1,3 +1,6 @@
+require('dotenv').config();
+const EMAIL = process.env.EMAIL; 
+const APP_PASS = process.env.APP_PASS;
 const { Doctor, Patient, Conversation, Text } = require('../models/User'); // Adjusted to Mongoose models
 const crypto = require('crypto');
 const nodemailer = require('nodemailer');
@@ -6,8 +9,8 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: email, // Replace with your email
-        pass: app_pass, // Replace with your app password
+        user: EMAIL, // Replace with your email
+        pass: APP_PASS, // Replace with your app password
     },
     tls: {
         rejectUnauthorized: false,
@@ -56,11 +59,6 @@ module.exports.docList_get = (req, res) => {
 };
 
 // Doctor Signup POST
-const crypto = require('crypto');
-const Doctor = require('../models/Doctor'); // Adjust path as needed
-const transporter = require('../config/email'); // Adjust path as needed
-const { handleErrors_doctor } = require('../utils/errorHandler'); // Adjust path as needed
-
 module.exports.doctorSignup_post = async (req, res) => {
     const { doctor_name, doctor_email, specialisation } = req.body;
     console.log("Processed request body:", { doctor_name, doctor_email, specialisation });
@@ -72,7 +70,7 @@ module.exports.doctorSignup_post = async (req, res) => {
         console.log("Doctor created:", doctor);
 
         const mailOptions = {
-            from: email,
+            from: EMAIL,
             to: doctor_email,
             subject: 'Your Account Password',
             text: `Your account has been created. Your password is: ${doctor_password}`,
@@ -114,7 +112,7 @@ module.exports.patientSignup_post = async (req, res) => {
         console.log("Patient created:", patient);
 
         const mailOptions = {
-            from: email,
+            from: EMAIL,
             to: patient_email,
             subject: 'Your Account Password',
             text: `Your account has been created. Your password is: ${patient_password}`,
