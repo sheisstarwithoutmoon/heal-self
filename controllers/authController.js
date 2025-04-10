@@ -87,7 +87,6 @@ module.exports.doctorSignup_post = async (req, res) => {
                 }
             });
         });
-
         res.redirect('/doctor/login');
     } catch (err) {
         console.error("Error in signup process:", err);
